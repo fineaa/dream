@@ -1,0 +1,134 @@
+//音乐
+$(".music").on("click",function(){
+	if($(".icon-music").attr("num")==1){
+		$(".icon-music").removeClass("open");
+		$(".icon-music").css("display","none");
+		$(".icon-music").attr("num","2");
+		$(".clo").css("display","block");
+		document.getElementById("aud").pause();
+	}else{
+		$(".icon-music").attr("num","1");
+		$(".icon-music").addClass("open");
+		$(".icon-music").css("display","block");
+		$(".clo").css("display","none");
+		document.getElementById("aud").play();
+	}
+})
+
+//第二
+var time1 = null;
+var time2 = 50;
+var x = 0;
+function Animate(){
+	$("#box img").css("display","none");
+	$("#box img").eq(x).css("display","block");
+	if(x>=47){
+		x=0;
+	}
+	x++;
+}
+time1 = setInterval(Animate,time2);
+//第四
+$(".f").on("click",function(){
+	var index = $(".slide4>.f").index($(this));
+	var i=index;
+	$(".v").eq(i).css("display","block").siblings().css("display","none");
+	$(".f").css("display","none");
+	$(".close1").css("display","block");
+	$(".rig").css("display","block");
+	$(".lef").css("display","block");
+	$(".x").css("display","none");
+	$(".hand1").css("display","none");
+})
+$(".swiper-button-next").on("click",function(){
+	i++;
+	if(i==7){
+		i=1;
+	}
+	$(".v").eq(i).css("display","block").siblings().css("display","none");
+})
+$(".swiper-button-prev").on("click",function(){
+	i--;
+	if(i==1){
+		i=7;
+	}
+	$(".v").eq(i).css("display","block").siblings().css("display","none");
+})
+$(".close1").on("click",function(){
+	$(".swiper-container-h .v").css("display","none");
+	$(".f").css("display","block");
+	$(".close1").css("display","none");
+	$(".rig").css("display","none");
+	$(".lef").css("display","none");
+})
+$(".close1").on("click",function(){
+	$(".swiper-container-h .v").css("display","none");
+	$(".f").css("display","block");
+	$(".close1").css("display","none");
+	$(".rig").css("display","none");
+	$(".lef").css("display","none");
+})
+//第五
+$(".men").on("click",function(){
+	$(".men1").css("display","none");
+})
+$(".mayue").on("click",function(){
+	$(".ma").fadeIn(500);
+	$(".close").click(function(){
+		$(".ma").fadeOut(500);
+	})
+})
+$(".bi").on("click",function(){
+	$(".bili").slideDown(500);
+	$(".close").click(function(){
+		$(".bili").slideUp(500);
+	})
+})
+$(".tang").on("click",function(){
+	$(".tanghuai").slideDown(500);
+	$(".close").click(function(){
+		$(".tanghuai").slideUp(500);
+	})
+})
+$(".yi").on("click",function(){
+	$(".yixiaoxing").slideDown(500);
+	$(".close").click(function(){
+		$(".yixiaoxing").slideUp(500);
+	})
+})
+$(".zhou").on("click",function(){
+	$(".zhoushou").slideDown(500);
+	$(".close").click(function(){
+		$(".zhoushou").slideUp(500);
+	})
+})
+$(".yu").on("click",function(){
+	$(".yujianjun").slideDown(500);
+	$(".close").click(function(){
+		$(".yujianjun").slideUp(500);
+	})
+})
+$(".hao").on("click",function(){
+	$(".haochang").slideDown(500);
+	$(".close").click(function(){
+		$(".haochang").slideUp(500);
+	})
+})
+$(".huang").on("click",function(){
+	$(".huangjixin").slideDown(500);
+	$(".close").click(function(){
+		$(".huangjixin").slideUp(500);
+	})
+})
+$(".li").on("click",function(){
+	$(".lizhiming").slideDown(500);
+	$(".close").click(function(){
+		$(".lizhiming").slideUp(500);
+	})
+})
+$(".ming").on("click",function(){
+	$(".limingwei").slideDown(500);
+	$(".close").click(function(){
+		$(".limingwei").slideUp(500);
+	})
+})
